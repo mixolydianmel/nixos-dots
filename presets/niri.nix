@@ -18,6 +18,7 @@
     ../programs/fuzzel.nix
     ../programs/fzf.nix
     # ../programs/gh.nix
+    ../programs/helix.nix
     # ../programs/hyprland.nix
     # ../programs/jq.nix
     # ../programs/lf.nix

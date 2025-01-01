@@ -3,9 +3,10 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     beeper
-    (blender.override {
-      cudaSupport = true;
-    })
+    # (blender.override {
+    #   stdenv = pkgs.gcc13Stdenv;
+    #   cudaSupport = true;
+    # })
     calcurse
     deadnix
     fastfetch
@@ -16,7 +17,7 @@
     grim
     imagemagick
     inkscape
-    jdk22
+    jdk21
     libsForQt5.qt5.qtwayland
     lutris
     mpv-unwrapped
