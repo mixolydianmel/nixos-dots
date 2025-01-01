@@ -1,0 +1,139 @@
+$background:  #1e2127;
+$foreground:  #abb2bf;
+$black:       #5c6370;
+$red:         #e06c75;
+$green:       #98c379;
+$yellow:      #e5c07b;
+$blue:        #61afef;
+$magenta:     #c678dd;
+$cyan:        #56b6c2;
+$white:       #abb2bf;
+
+* {
+  all: unset;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $black;
+  border-radius: 10px;
+  min-height: 20px;
+  min-width: 15px;
+}
+
+scale trough highlight {
+  background-color: $magenta;
+  padding-left: 0.5rem;
+}
+
+.haxbox {
+  background-color: $background;
+  color: $foreground;
+  font-family: "BlexMono Nerd Font", monospace;
+  padding: 1.5rem;
+}
+
+.panel {
+  border-top: 5px solid $magenta;
+  background-color: rgba(78,47,87,0.2);
+  padding: 1rem;
+}
+
+.cpuids {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.cpufreqs {
+  font-weight: 300;
+  font-style: oblique;
+  font-size: 1.5rem;
+}
+
+.networkup {
+  color: $blue;
+}
+
+.networkdn {
+  color: $green;
+}
+
+.coretempid {
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 1.5rem
+}
+
+.coretempval {
+  font-weight: 300;
+  font-size: 2.25rem;
+}
+
+.rambox label {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+.diskentry label {
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+.batteryval {
+  color: $magenta;
+}
+
+.batterytrough {
+  color: $black;
+}
+
+.batterylabel {
+  font-weight: 900;
+  font-style: oblique;
+  font-size: 2.25rem;
+}
+
+.timeclock {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.timelabel {
+  font-size: 2.25rem;
+  font-weight: 900;
+  font-style: oblique;
+}
+
+.timedate {
+  font-size: 2.25rem;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+.workspace-entry {
+  font-size: 3rem;
+}
+
+.occupied {
+  color: $foreground;
+}
+
+.empty {
+  font-weight: 300;
+  color: $black;
+  font-style: oblique;
+}
+
+.current {
+  color: $magenta;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.current label {
+  border-bottom: 2.5px solid $magenta;
+  border-radius: 0px;
+}

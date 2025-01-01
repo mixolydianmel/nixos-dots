@@ -1,0 +1,248 @@
+/*
+colors = {
+  primary = {
+    background = "#1e2127";
+    foreground = "#abb2bf";
+  };
+  normal = {
+    black = "#5c6370";
+    red = "#e06c75";
+    green = "#98c379";
+    yellow = "#e5c07b";
+    blue = "#61afef";
+    magenta = "#c678dd";
+    cyan = "#56b6c2";
+    white = "#abb2bf";
+  };
+  bright = {
+    black = "#5c6370";
+    red = "#e06c75";
+    green = "#98c379";
+    yellow = "#e5c07b";
+    blue = "#61afef";
+    magenta = "#c678dd";
+    cyan = "#56b6c2";
+    white = "#ffffff";
+  };
+};
+*/
+window.dash {
+  background-color: #1e2127;
+  color: #abb2bf;
+}
+
+button {
+  background-color: transparent;
+  color: #abb2bf;
+  border:none;
+}
+
+.workspaces {
+  background-color: #282c34;
+  padding-left: 1rem;
+  box-shadow: inset 0 1rem 1rem -2px #1e2127;
+}
+
+.workspaces button {
+  font-size: 2.5rem;
+}
+
+.workspaces box {
+  transition-duration: 0.2s;
+  border-right: 0px solid #c678dd;
+  padding-right: 1.5rem;
+}
+
+.workspaces box.focused {
+  border-right: 0.5rem solid #c678dd;
+  padding-right: 1rem;
+
+  transition-duration: 0.2s;
+  transition-delay: 0.05s;
+}
+
+.workspaces box.focused button {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.workspaces label {
+  min-width: 5rem;
+}
+
+.topbar {
+  background-color: #282c34;
+  padding: 0.5rem 2rem;
+  box-shadow: inset 0 0 1rem -0.2rem #1e2127;
+}
+
+@keyframes logoSwell {
+  from {
+    color: #e06c75;
+  }
+  15% {
+    color: #98c379;
+  }
+  30% {
+    color: #e5c07b;
+  }
+  45% {
+    color: #61afef;
+  }
+  70% {
+    color: #c678dd;
+  }
+  85% {
+    color: #56b6c2;
+  }
+  to {
+    color: #e06c75;
+  }
+}
+
+.mainlogo {
+  font-size: 5rem;
+  color: #c678dd;
+  padding-right: 4rem;
+  padding-left: 1rem;
+  animation: 10s infinite normal logoSwell;
+  animation-timing-function: linear;
+}
+
+.maintitle {
+  font-size: 3rem;
+  font-family: "Arimo Nerd Font", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mainple {
+  color: #c678dd;
+  background-color: #282c34;
+  margin-right: 0.5rem;
+}
+
+.maintext {
+  padding: 0 1rem;
+  background-color: #c678dd;
+  color: #282c34;
+}
+
+@keyframes cursorFade {
+  50% {
+    border-bottom-color: rgba(171,178,191,1);
+  }
+
+  75% {
+    border-bottom-color: rgba(171,178,191,0);
+  }
+
+  to {
+    border-bottom-color: rgba(171,178,191,0);
+  }
+}
+
+.maintitle .maincursor {
+  min-height: 3rem;
+  min-width: 4rem;
+  border-bottom: 0.5rem solid rgba(171,178,191,1);
+  animation: 1s infinite alternate cursorFade;
+  animation-timing-function: linear;
+}
+
+.topbar overlay label {
+  font-size: 2rem;
+}
+
+.cpu label, .ram label {
+  padding-right: 0.5rem;
+}
+
+.disk label {
+  padding-right: 0.6rem;
+}
+
+.cpu {
+  color: #e5c07b;
+}
+
+.ram {
+  color: #61afef;
+}
+
+.disk {
+  color: #56b6c2;
+}
+
+.volume {
+  font-size: 1.5rem;
+  color: #56b6c2;
+}
+
+levelbar trough {
+  background-color: #32363e;
+  border: none;
+}
+
+levelbar.discrete block {
+  min-width: 2px;
+}
+
+.volume levelbar block.filled {
+  background-color: #56b6c2;
+  min-height: 1.15rem;
+}
+
+.volume levelbar block.empty {
+  background-color: #5c6370;
+}
+
+.volicon {
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+
+.battery {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  min-height: 1.5rem;
+  color: #98c379;
+}
+
+.battery label {
+  padding-right: 0.5rem;
+}
+
+.battery levelbar block.filled {
+  background-color: #98c379;
+  min-height: 1.15rem;
+}
+
+.battery levelbar block.empty {
+  background-color: #5c6370;
+}
+
+.battery_level {
+  font-size: 1rem;
+}
+
+.datetime {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+.bottombar {
+  background-color: #1e2127;
+  border:none;
+
+  color: #e5c07b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bottombar label {
+  padding: 0.5rem;
+  background-color: #282c34;
+  box-shadow: inset 0 1rem 0.5rem #1e2127;
+}

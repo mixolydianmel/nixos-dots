@@ -1,0 +1,273 @@
+(deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/get-workspaces")
+(deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/get-active-workspace")
+
+(defwindow hax
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :stacking "bg"
+  :exclusive false
+  (box :orientation "v"
+       :space-evenly false
+       :spacing 20
+       :class "haxbox"
+    (box :orientation "h"
+         :spacing 20
+         :vexpand true
+         :class "topbox"
+         :space-evenly false
+      (cpu)
+      (box :orientation "v"
+           :spacing 20
+           :hexpand true
+        (network)
+        (box :orientation "h"
+             :spacing 20
+          (temps)
+          (ram)
+          (disk))))
+    (box :orientation "h"
+         :vexpand true
+         :hexpand true
+         :class "bottombox"
+         :space-evenly false
+         :spacing 20
+      (box :orientation "v"
+           :spacing 20
+           :hexpand true
+        (time)
+        (workspaces))
+      (battery))))
+
+(defwindow hax2
+  :monitor 1
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "top left")
+  :stacking "bg"
+  :exclusive false
+  (box :orientation "v"
+       :space-evenly false
+       :spacing 20
+       :class "haxbox"
+    (box :orientation "h"
+         :spacing 20
+         :vexpand true
+         :class "topbox"
+         :space-evenly false
+      (cpu)
+      (box :orientation "v"
+           :spacing 20
+           :hexpand true
+        (network)
+        (box :orientation "h"
+             :spacing 20
+          (temps)
+          (ram)
+          (disk))))
+    (box :orientation "h"
+         :vexpand true
+         :hexpand true
+         :class "bottombox"
+         :space-evenly false
+         :spacing 20
+      (box :orientation "v"
+           :spacing 20
+           :hexpand true
+        (time)
+        (workspaces))
+      (battery))))
+
+(defwidget infolabel [id name]
+  (label :class "infolabel"
+         :text "${id} // ${name}"
+         :hexpand true))
+
+(defwidget battery []
+  (box :orientation "v"
+       :class "batterybox panel"
+       :vexpand true
+       :hexpand true
+       :space-evenly false
+    (overlay :vexpand true
+      (circular-progress :value 75
+                       :clockwise true
+                       :start-at 37.5
+                       :thickness 30
+                       :class "batterytrough")
+      (circular-progress :value {EWW_BATTERY["BAT0"].capacity / 100 * 75}
+                       :clockwise true
+                       :start-at 37.5
+                       :thickness 30
+                       :class "batteryval"))
+    (label :text {EWW_BATTERY["BAT0"].status}
+           :class "batterylabel")))
+
+(defwidget temps []
+  (box :orientation "v"
+       :class "tempsbox panel"
+    (coretemp :id 0)
+    (coretemp :id 1)
+    (coretemp :id 2)
+    (coretemp :id 3)
+    (coretemp :id 4)
+    (coretemp :id 5)
+    (coretemp :id 6)
+    (coretemp :id 7)))
+
+(defwidget coretemp [id]
+  (box :orientation "h"
+       :space-evenly false
+       :spacing 20
+       :halign "center"
+       :valign "center"
+       :class "coretempbox"
+      (label :text "CORE ${id}"
+             :class "coretempid")
+      (label :text "${EWW_TEMPS["CORETEMP_CORE_${id}"]}°C"
+             :class "coretempval")))
+
+(defwidget network []
+  (box :orientation "v"
+       :class "networkbox panel"
+       :spacing 20
+    (graph :value {EWW_NET["wlan0"]["NET_UP"]}
+           :thickness 5
+           :dynamic true
+           :time-range "30s"
+           :height 50
+           :class "networkup")
+    (graph :value {EWW_NET["wlan0"]["NET_DOWN"]}
+           :thickness 5
+           :dynamic true
+           :time-range "30s"
+           :height 50
+           :class "networkdn")))
+
+(defwidget ram []
+  (box :orientation "v"
+       :class "rambox panel"
+    (box :orientation "h"
+         :space-evenly false
+         :spacing 10
+      (label :text "MEM")
+      (scale :value {EWW_RAM["total_mem"] - EWW_RAM["free_mem"]}
+             :active false
+             :flipped false
+             :min 0
+             :max {EWW_RAM["total_mem"]}
+             :hexpand true))
+    (box :orientation "h"
+         :space-evenly false
+         :spacing 10
+      (label :text "SWP")
+      (scale :value {EWW_RAM["total_swap"] - EWW_RAM["free_swap"]}
+             :active false
+             :min 0
+             :max {EWW_RAM["total_swap"]}
+             :hexpand true))
+    (box :orientation "h"
+         :space-evenly false
+         :spacing 10
+      (label :text "PRC")
+      (scale :value {EWW_RAM["used_mem_perc"]}
+             :active false
+             :min 0
+             :max 100
+             :hexpand true))))
+
+(defwidget disk []
+  (box :orientation "v"
+       :class "diskbox panel"
+    (diskentry :name "ROOT"
+               :directory "/")
+    (diskentry :name "STOR"
+               :directory "/nix/store")
+    (diskentry :name "BOOT"
+               :directory "/boot")))
+
+(defwidget diskentry [name directory]
+  (box :orientation "h"
+        :class "diskentry"
+        :space-evenly false
+        :spacing 10
+      (label :text name)
+      (scale :value {EWW_DISK[directory]["used_perc"]}
+            :active false
+            :min 0
+            :max 100
+            :hexpand true)))
+
+(defwidget cpu []
+  (box :orientation "h"
+       :space-evenly false
+       :class "cpubox panel"
+       :spacing 10
+       :hexpand true
+    (box :orientation "v"
+         :class "cpuids"
+         :halign "end"
+         :hexpand false
+         :spacing 10
+      (for entry in {EWW_CPU["cores"]}
+        (label :text "${entry.core}")))
+    (box :orientation "v"
+         :class "cpufreqs"
+         :halign "end"
+         :hexpand false
+         :spacing 10
+      (for entry in {EWW_CPU["cores"]}
+        (label :text "${entry.freq}")))
+    (box :orientation "v"
+         :class "cpuscales"
+         :hexpand true
+         :spacing 10
+      (for entry in {EWW_CPU["cores"]}
+        (scale :value {entry.usage}
+               :min 0
+               :max 100
+               :flipped false)))))
+
+(defwidget time []
+  (box :orientation "v"
+       :class "timebox panel"
+       :space-evenly false
+       :spacing 20
+    (box :orientation "h"
+        :vexpand true
+        :hexpand true
+      (worldclock :name "New York"
+                  :timezone "America/New_York")
+      (worldclock :name "Madrid"
+                  :timezone "Europe/Madrid")
+      (worldclock :name "Moscow"
+                  :timezone "Europe/Moscow")
+      (worldclock :name "Shanghai"
+                  :timezone "Asia/Shanghai")
+      (worldclock :name "Sydney"
+                  :timezone "Australia/Sydney"))
+    (label :text {formattime(EWW_TIME, "%Y-%m-%d")}
+           :class "timedate")))
+
+(defwidget worldclock [name timezone]
+  (box :orientation "v"
+       :space-evenly false
+       :class "worldclockbox"
+       :valign "center"
+    (label :text {formattime(EWW_TIME, "%H:%M:%S", "${timezone}")}
+           :class "timeclock")
+    (label :text name
+           :class "timelabel")))
+
+(defwidget workspaces []
+  (box :class "workspaces panel"
+    (label :text "${workspaces}${current_workspace}" :visible false)
+    (for workspace in workspaces
+      (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
+        (box :class "workspace-entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+          (label :text "${workspace.id}"))))))
