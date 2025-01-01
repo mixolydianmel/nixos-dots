@@ -785,7 +785,6 @@ $env.config = {
 }
 
 alias q  = exit
-alias v  = nvim
 alias ll = ls -l
 
 pfetch

@@ -8,7 +8,6 @@
     #   cudaSupport = true;
     # })
     calcurse
-    deadnix
     fastfetch
     fd
     ffmpeg-full
@@ -22,8 +21,6 @@
     lutris
     mpv-unwrapped
     niri
-    nixd
-    nixfmt-rfc-style
     nvtopPackages.full
     p7zip
     pass-wayland
@@ -37,9 +34,7 @@
     slack
     slurp
     spotify
-    statix
     steam
-    swww
     sxiv
     ueberzugpp
     vesktop
@@ -47,6 +42,5 @@
     wl-clipboard
     xdg-desktop-portal-wlr
     xwayland-satellite
-    zellij
   ];
 }

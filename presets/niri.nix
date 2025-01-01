@@ -22,7 +22,7 @@
     # ../programs/hyprland.nix
     # ../programs/jq.nix
     # ../programs/lf.nix
-    ../programs/neovim.nix
+    # ../programs/neovim.nix
     ../programs/nushell.nix
     ../programs/obs-studio.nix
     ../programs/ripgrep.nix
