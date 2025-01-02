@@ -6,12 +6,11 @@
 // Spawn startup programs.
 spawn-at-startup "xwayland-satellite"
 
-// NOTE: This should be done through envvars.nix instead.
-//
 // Set environment variables.
-// environment {
-//   DISPLAY ":0"
-// }
+// FIXME: This should be done through envvars.nix instead.
+environment {
+  DISPLAY ":0"
+}
 
 // Input device configuration.
 // Find the full list of options on the wiki:
@@ -328,6 +327,8 @@ binds {
   Mod+Shift+P { spawn "foot" "pulsemixer"; }
   Mod+Shift+B { spawn "foot" "bluetoothctl"; }
   mod+Shift+S { spawn "foot" "btm"; }
+
+  mod+Shift+S { spawn "~/.scripts/passmenu.bash"; }
 
   // You can also use a shell. Do this if you need pipes, multiple commands, etc.
   // Note: the entire command goes as a single argument in the end.

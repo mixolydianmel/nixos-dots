@@ -15,6 +15,7 @@
     gimp
     grim
     imagemagick
+    imv
     inkscape
     jdk21
     libsForQt5.qt5.qtwayland
@@ -35,7 +36,6 @@
     slurp
     spotify
     steam
-    sxiv
     ueberzugpp
     vesktop
     winePackages.wayland
