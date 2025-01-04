@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     beeper
     # (blender.override {
-    #   stdenv = pkgs.gcc13Stdenv;
+    #   stdenv = pkgs.gcc12Stdenv;
     #   cudaSupport = true;
     # })
     calcurse

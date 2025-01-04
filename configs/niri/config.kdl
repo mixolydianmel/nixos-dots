@@ -328,7 +328,8 @@ binds {
   Mod+Shift+B { spawn "foot" "bluetoothctl"; }
   mod+Shift+S { spawn "foot" "btm"; }
 
-  mod+Shift+S { spawn "~/.scripts/passmenu.bash"; }
+  mod+Shift+A { spawn "bash" "-c" "~/.scripts/passmenu.bash"; }
+  mod+Shift+Escape { spawn "bash" "-c" "~/.scripts/powerctrl.bash"; }
 
   // You can also use a shell. Do this if you need pipes, multiple commands, etc.
   // Note: the entire command goes as a single argument in the end.

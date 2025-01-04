@@ -7,7 +7,49 @@
       theme = "onedark-nobg";
       editor = {
         line-number = "relative";
-        lsp.display-messages = true;
+        undercurl = true;
+        indent-guides.render = true;
+        color-modes = true;
+        bufferline = "multiple";
+
+        cursor-shape = {
+          normal = "block";
+          insert = "bar";
+          select = "underline";
+        };
+
+        statusline = {
+          left = [ 
+            "mode" 
+            "spinner" 
+            "file-name" 
+            "read-only-indicator"
+            "file-modification-indicator" 
+            "version-control"
+          ];
+          center = [];
+          right = [
+            "diagnostics"
+            "selections"
+            "register"
+            "position"
+            "file-encoding"
+          ];
+        };
+
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
+      };
+
+      keys = {
+        normal = {
+          space."." = "file_picker_in_current_buffer_directory";
+          space.w = ":w";
+          space.q = ":q";
+          esc = [ "collapse_selection" "keep_primary_selection" ];
+        };
       };
     };
     themes = {
@@ -35,6 +77,11 @@
 
       # nix
       nil
+      nixd
+
+      # rust
+      rust-analyzer
+      rustfmt
 
       # typst
       tinymist

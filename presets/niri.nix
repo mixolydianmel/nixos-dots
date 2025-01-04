@@ -21,6 +21,7 @@
     ../programs/helix.nix
     # ../programs/hyprland.nix
     # ../programs/jq.nix
+    ../programs/jujutsu.nix
     # ../programs/lf.nix
     # ../programs/neovim.nix
     ../programs/nushell.nix
@@ -28,6 +29,7 @@
     ../programs/ripgrep.nix
     ../programs/starship.nix
     ../programs/zathura.nix
+    ../programs/zed.nix
 
     # --- User Services ---
     ../services/gammastep.nix

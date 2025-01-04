@@ -16,7 +16,7 @@
     in
     {
       enable = true;
-      defaultEditor = true;
+      # defaultEditor = true;
 
       extraPackages = with pkgs; [
         wl-clipboard
