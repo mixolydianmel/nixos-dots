@@ -12,6 +12,11 @@
         color-modes = true;
         bufferline = "multiple";
 
+        end-of-line-diagnostics = "hint";
+        inline-diagnostics = {
+          cursor-line = "error";
+        };
+
         cursor-shape = {
           normal = "block";
           insert = "bar";
@@ -48,6 +53,7 @@
           space."." = "file_picker_in_current_buffer_directory";
           space.w = ":w";
           space.q = ":q";
+          space.l = ":reflow";
           esc = [ "collapse_selection" "keep_primary_selection" ];
         };
       };
@@ -71,6 +77,20 @@
       # cmake
       cmake-language-server
 
+      # docker-compose
+      docker-compose-language-service
+      yaml-language-server
+
+      # dockerfile
+      dockerfile-language-server-nodejs
+
+      # glsl
+      glsl_analyzer
+
+      # html
+      superhtml
+      vscode-langservers-extracted # Also does CSS, JSON, and ESLint
+
       # markdown
       marksman
       markdown-oxide
@@ -82,6 +102,9 @@
       # rust
       rust-analyzer
       rustfmt
+
+      # typescript
+      typescript-language-server
 
       # typst
       tinymist
