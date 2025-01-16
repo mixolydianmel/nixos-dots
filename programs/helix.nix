@@ -51,7 +51,6 @@
       keys = {
         normal = {
           space."." = "file_picker_in_current_buffer_directory";
-          space.w = ":w";
           space.q = ":q";
           space.l = ":reflow";
           esc = [ "collapse_selection" "keep_primary_selection" ];
