@@ -44,7 +44,7 @@
 
         lsp = {
           display-messages = true;
-          display-inlay-hints = true;
+          # display-inlay-hints = true;
         };
       };
 
@@ -54,6 +54,8 @@
           space.q = ":q";
           space.l = ":reflow";
           esc = [ "collapse_selection" "keep_primary_selection" ];
+          "H" = ":buffer-previous";
+          "L" = ":buffer-next";
         };
       };
     };

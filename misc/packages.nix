@@ -3,10 +3,10 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     beeper
-    # (blender.override {
-    #   stdenv = pkgs.gcc13Stdenv;
-    #   cudaSupport = true;
-    # })
+    (blender.override {
+      stdenv = pkgs.gcc13Stdenv;
+      cudaSupport = true;
+    })
     calcurse
     fastfetch
     fd
@@ -28,6 +28,7 @@
     pfetch
     prismlauncher
     pulsemixer
+    pureref
     qpwgraph
     qt6.qtwayland
     ripdrag
