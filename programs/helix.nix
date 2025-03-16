@@ -65,11 +65,36 @@
         "ui.background" = "none";
       };
     };
+    languages = {
+      grammar = [
+        {
+          name = "asciidoc";
+          source = {
+            git = "git@github.com:cathaysia/tree-sitter-asciidoc.git";
+            rev = "a94558880d2d5d51659c1d9c2579f21af273cb3d";
+            subpath = "tree-sitter-asciidoc";
+          };
+        }
+      ];
+
+      language = [
+        {
+          name = "asciidoc";
+          language-id = "asciidoc";
+          scope = "source.adoc";
+          injection-regex = "adoc";
+          file-types = ["adoc"];
+          comment-tokens = ["//"];
+          block-comment-tokens = { start = "////"; end = "////"; };
+          grammar = "asciidoc";
+        }
+      ];
+    };
     extraPackages = with pkgs; [
       # --- Language Servers ---
       # c / c++
       clang-tools
-      lldb
+      # lldb
 
       # c-sharp
       omnisharp-roslyn

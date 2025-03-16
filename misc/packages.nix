@@ -2,12 +2,14 @@
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
+    asciidoctor-with-extensions
     beeper
+    bottles
     (blender.override {
-      stdenv = pkgs.gcc13Stdenv;
       cudaSupport = true;
     })
     calcurse
+    # discord
     fastfetch
     fd
     ffmpeg-full
@@ -19,8 +21,10 @@
     inkscape
     jdk21
     libsForQt5.qt5.qtwayland
-    lutris
+    # lutris
     mpv-unwrapped
+    musescore
+    nb
     niri
     nvtopPackages.full
     p7zip
@@ -37,10 +41,15 @@
     slurp
     spotify
     steam
+    typst
     ueberzugpp
     vesktop
+    w3m
+    # webcord
+    # webcord-vencord
     winePackages.wayland
     wl-clipboard
+    xdg-desktop-portal
     xdg-desktop-portal-wlr
     xwayland-satellite
   ];

@@ -10,6 +10,7 @@
     # ../programs/ags.nix
     # inputs.ags.homeManagerModules.default  # Required for above
     # ../programs/alacritty.nix
+    ../programs/bat.nix
     ../programs/bottom.nix
     # ../programs/cava.nix
     # ../programs/eww.nix
@@ -18,6 +19,7 @@
     ../programs/fuzzel.nix
     ../programs/fzf.nix
     # ../programs/gh.nix
+    ../programs/git.nix
     ../programs/helix.nix
     # ../programs/hyprland.nix
     # ../programs/jq.nix
@@ -29,13 +31,14 @@
     ../programs/ripgrep.nix
     ../programs/starship.nix
     ../programs/zathura.nix
-    ../programs/zed.nix
+    # ../programs/zed.nix
 
     # --- User Services ---
     ../services/gammastep.nix
     ../services/mako.nix
     ../services/poweralertd.nix
     ../services/pueue.nix
+    ../services/xdg-portal.nix
   ];
 
   # Mute news

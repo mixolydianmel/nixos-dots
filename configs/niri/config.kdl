@@ -114,7 +114,7 @@ output "eDP-1" {
   background-color "#1e2127"
 }
 
-output "HDMI-A-1" {
+output "HDMI-A-3" {
   mode "3840x2160@60.000"
   scale 1
   transform "normal"
