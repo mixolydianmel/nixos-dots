@@ -14,7 +14,7 @@
     ../programs/bottom.nix
     # ../programs/cava.nix
     # ../programs/eww.nix
-    ../programs/firefox.nix
+    # ../programs/firefox.nix
     ../programs/foot.nix
     ../programs/fuzzel.nix
     ../programs/fzf.nix
@@ -25,6 +25,7 @@
     # ../programs/jq.nix
     ../programs/jujutsu.nix
     # ../programs/lf.nix
+    ../programs/librewolf.nix
     # ../programs/neovim.nix
     ../programs/nushell.nix
     ../programs/obs-studio.nix
