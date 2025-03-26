@@ -113,6 +113,10 @@
       # glsl
       glsl_analyzer
 
+      # go
+      gopls
+      golangci-lint-langserver
+
       # html
       superhtml
       vscode-langservers-extracted # Also does CSS, JSON, and ESLint
