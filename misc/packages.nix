@@ -41,6 +41,7 @@
     slurp
     spotify
     steam
+    transmission-qt
     typst
     ueberzugpp
     vesktop
