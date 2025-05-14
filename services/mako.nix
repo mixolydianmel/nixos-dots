@@ -11,5 +11,7 @@
     borderColor = "#c678ddff";
 
     defaultTimeout = 5000;
+
+    font = "JetBrainsMono Nerd Font";
   };
 }

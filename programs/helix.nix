@@ -88,7 +88,122 @@
           block-comment-tokens = { start = "////"; end = "////"; };
           grammar = "asciidoc";
         }
+
+        {
+          name = "typescript";
+          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "typescript"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "tsx";
+          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "typescript"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "javascript";
+          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "typescript"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "jsx";
+          language-servers = [ "typescript-language-server" "eslint" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "typescript"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "json";
+          formatter = {
+            language-servers = ["vscode-json-language-server" "eslint"];
+            command = "prettier";
+            args = ["--parser" "json"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "html";
+          language-servers = ["vscode-html-language-server" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "html"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "css";
+          language-servers = ["vscode-css-language-server" "emmet-ls"];
+          formatter = {
+            command = "prettier";
+            args = ["--parser" "css"];
+          };
+          auto-format = true;
+        }
       ];
+
+      language-server = {
+        emmet-ls = {
+          command = "emmet-ls";
+          args = ["--stdio"];
+        };
+
+        eslint = {
+          command = "vscode-eslint-language-server";
+          args = ["--stdio"];
+          config = {
+            codeActionsOnSave = { mode = "all"; "source.fixAll.eslint" = true; };
+            format = { enable = true; };
+            nodePath = "";
+            quiet = false;
+            rulesCustomizations = [];
+            run = "onType";
+            validate = "on";
+            experimental = {};
+            problems = { shortenToSingleLine = false; };
+
+            codeAction = {
+              disableRuleComment = { enable = true; location = "separateLine"; };
+              showDocumentation = { enable = false; };
+            };
+          };
+        };
+
+        vscode-json-language-server.config = {
+          json = {
+            validate = { enable = true; };
+            format = { enable = true; };
+          };
+
+          provideFormatter = true;
+        };
+
+        vscode-css-language-server.config = {
+          css = { validate = { enable = true; }; };
+          scss = { validate = { enable = true; }; };
+          less = { validate = { enable = true; }; };
+
+          provideFormatter = true;
+        };
+      };
     };
     extraPackages = with pkgs; [
       # --- Language Servers ---
@@ -115,11 +230,14 @@
 
       # go
       gopls
+      golangci-lint
       golangci-lint-langserver
 
       # html
       superhtml
       vscode-langservers-extracted # Also does CSS, JSON, and ESLint
+      emmet-ls
+      nodePackages.prettier
 
       # markdown
       marksman
