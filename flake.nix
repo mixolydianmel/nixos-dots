@@ -10,6 +10,11 @@
     };
     # Widgets galore
     ags.url = "github:Aylur/ags";
+    # A calmer web
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

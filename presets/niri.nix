@@ -14,7 +14,7 @@
     ../programs/bottom.nix
     # ../programs/cava.nix
     # ../programs/eww.nix
-    ../programs/firefox.nix
+    # ../programs/firefox.nix
     ../programs/foot.nix
     ../programs/fuzzel.nix
     ../programs/fzf.nix
@@ -23,22 +23,24 @@
     ../programs/helix.nix
     # ../programs/hyprland.nix
     # ../programs/jq.nix
-    ../programs/jujutsu.nix
+    # ../programs/jujutsu.nix
     # ../programs/lf.nix
     # ../programs/librewolf.nix
     # ../programs/neovim.nix
     ../programs/nushell.nix
-    ../programs/obs-studio.nix
+    # ../programs/obs-studio.nix
     ../programs/ripgrep.nix
     ../programs/starship.nix
     ../programs/zathura.nix
     # ../programs/zed.nix
+    ../programs/zen-browser.nix
+    inputs.zen-browser.homeModules.beta
 
     # --- User Services ---
     ../services/gammastep.nix
     ../services/mako.nix
     ../services/poweralertd.nix
-    ../services/pueue.nix
+    # ../services/pueue.nix
     ../services/xdg-portal.nix
   ];
 

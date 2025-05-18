@@ -320,7 +320,8 @@ binds {
   Mod+C { spawn "foot" "calcurse"; }
   Mod+D { spawn "beeper"; }
   Mod+S { spawn "spotify"; }
-  Mod+W { spawn "firefox"; }
+  // Mod+W { spawn "firefox"; }
+  Mod+W { spawn "zen"; }
 
   Mod+Ctrl+D { spawn "vesktop"; }
 
