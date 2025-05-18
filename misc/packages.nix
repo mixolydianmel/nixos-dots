@@ -19,10 +19,10 @@
     imagemagick
     imv
     inkscape
-    jdk21
+    # jdk21
     libsForQt5.qt5.qtwayland
     # lutris
-    mpv-unwrapped
+    mpv
     musescore
     nb
     niri
@@ -30,9 +30,8 @@
     p7zip
     pass-wayland
     pfetch
-    prismlauncher
+    # prismlauncher
     pulsemixer
-    pureref
     qpwgraph
     qt6.qtwayland
     ripdrag
@@ -40,11 +39,11 @@
     slack
     slurp
     spotify
-    steam
+    # steam
     typst
-    ueberzugpp
+    # ueberzugpp
     vesktop
-    w3m
+    # w3m
     # webcord
     # webcord-vencord
     winePackages.wayland

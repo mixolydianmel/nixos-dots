@@ -2,16 +2,17 @@
 {
   services.mako = {
     enable = true;
+    settings = {
+      background-color = "#1e2127ff";
+      text-color = "#abb2bfff";
 
-    backgroundColor = "#1e2127ff";
-    textColor = "#abb2bfff";
+      border-size = 2;
+      border-radius = 10;
+      border-color = "#c678ddff";
 
-    borderSize = 2;
-    borderRadius = 10;
-    borderColor = "#c678ddff";
+      default-timeout = 5000;
 
-    defaultTimeout = 5000;
-
-    font = "JetBrainsMono Nerd Font";
+      font = "Nacelle 14";
+    };
   };
 }
