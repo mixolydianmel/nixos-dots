@@ -27,6 +27,7 @@
     # ../programs/lf.nix
     # ../programs/librewolf.nix
     # ../programs/neovim.nix
+    ../programs/nix-index.nix
     ../programs/nushell.nix
     # ../programs/obs-studio.nix
     ../programs/ripgrep.nix

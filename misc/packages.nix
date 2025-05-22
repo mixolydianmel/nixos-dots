@@ -14,8 +14,8 @@
     fd
     ffmpeg-full
     gamemode
-    gimp
-    grim
+    # gimp
+    # grim
     imagemagick
     imv
     inkscape
@@ -30,17 +30,17 @@
     p7zip
     pass-wayland
     pfetch
-    # prismlauncher
+    prismlauncher
     pulsemixer
     qpwgraph
     qt6.qtwayland
     ripdrag
     sc-im
     slack
-    slurp
+    # slurp
     spotify
     # steam
-    typst
+    # typst
     # ueberzugpp
     vesktop
     # w3m
