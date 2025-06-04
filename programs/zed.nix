@@ -4,6 +4,7 @@
     enable = true;
     extensions = [
       "nix"
+      "TOML"
     ];
     userSettings = {
       telemetry = {

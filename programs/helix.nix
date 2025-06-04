@@ -81,7 +81,7 @@
         {
           name = "asciidoc";
           language-id = "asciidoc";
-          scope = "source.adoc";
+          scope = "text.adoc";
           injection-regex = "adoc";
           file-types = ["adoc"];
           comment-tokens = ["//"];
@@ -101,12 +101,13 @@
 
         {
           name = "tsx";
-          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          file-types = ["tsx"];
+          language-servers = ["typescript-language-server" "eslint"];
           formatter = {
             command = "prettier";
             args = ["--parser" "typescript"];
           };
-          auto-format = true;
+          auto-format = false;
         }
 
         {

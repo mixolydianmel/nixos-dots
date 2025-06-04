@@ -19,7 +19,6 @@
     imagemagick
     imv
     inkscape
-    # jdk21
     libsForQt5.qt5.qtwayland
     # lutris
     mpv
@@ -39,7 +38,6 @@
     slack
     # slurp
     spotify
-    # steam
     # typst
     # ueberzugpp
     vesktop

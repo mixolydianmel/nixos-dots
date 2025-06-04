@@ -36,6 +36,7 @@
     # ../programs/zed.nix
     ../programs/zen-browser.nix
     inputs.zen-browser.homeModules.beta
+    # ../programs/floorp.nix
 
     # --- User Services ---
     ../services/gammastep.nix

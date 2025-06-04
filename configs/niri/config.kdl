@@ -321,6 +321,7 @@ binds {
   Mod+D { spawn "beeper"; }
   Mod+S { spawn "spotify"; }
   Mod+W { spawn "zen"; }
+  // Mod+W { spawn "floorp"; }
 
   Mod+Ctrl+D { spawn "vesktop"; }
 
