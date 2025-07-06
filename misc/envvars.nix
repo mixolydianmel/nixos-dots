@@ -11,6 +11,7 @@
     ENABLE_VKBASALT = "1";
     QT_QPA_PLATFORMTHEME = "wayland;xcb";
     DISPLAY = ":0";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };
 
   xdg.userDirs = {

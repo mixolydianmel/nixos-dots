@@ -16,20 +16,20 @@
       };
 
       colors = {
-        background = "1e2127ee";
-        text = "5c6370ff";
-        prompt = "c678ddff";
-        input = "abb2bfff";
-        match = "c678ddff";
-        selection = "5c6370ff";
-        selection-text = "abb2bfff";
-        selection-match = "c678ddff";
-        border = "c678ddff";
+        background = "1e1e1eff";
+        text = "d4d4d4ff";
+        prompt = "608b4eff";
+        input = "d4d4d4ff";
+        match = "569cd6ff";
+        selection = "3a3d41ff";
+        selection-text = "d4d4d4ff";
+        selection-match = "569cd6ff";
+        border = "3a3d41ff";
       };
 
       border = {
-        width = 4;
-        radius = 5;
+        width = 1;
+        radius = 15;
       };
     };
   };
