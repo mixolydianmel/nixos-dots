@@ -36,8 +36,8 @@
         bright2 = "b5cea8";
         bright3 = "dcdcaa";
         bright4 = "9cdcfe";
-        bright5 = "c586c0";
-        bright6 = "4ec9b0";
+        bright5 = "e5b6e0";
+        bright6 = "6ee9d0";
         bright7 = "d4d4d4";
       };
     };
