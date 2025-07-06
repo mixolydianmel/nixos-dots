@@ -4,7 +4,7 @@
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "onedark-nobg";
+      theme = "dark_plus-nobg";
       editor = {
         line-number = "relative";
         undercurl = true;
@@ -60,8 +60,8 @@
       };
     };
     themes = {
-      onedark-nobg = {
-        "inherits" = "onedark";
+      dark_plus-nobg = {
+        "inherits" = "dark_plus";
         "ui.background" = "none";
       };
     };
