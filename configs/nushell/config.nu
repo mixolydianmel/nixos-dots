@@ -6,68 +6,100 @@
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
 # https://github.com/nushell/nu_scripts/tree/main/themes
-let dark_theme = {
-    # color for nushell primitives
-    separator: white
-    leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
-    header: green_bold
-    empty: blue
-    # Closures can be used to choose colors for specific values.
-    # The value (in this case, a bool) is piped into the closure.
-    # eg) {|| if $in { 'light_cyan' } else { 'light_gray' } }
-    bool: light_cyan
-    int: white
-    filesize: cyan
-    duration: white
-    date: purple
-    range: white
-    float: white
-    string: white
-    nothing: white
-    binary: white
-    cell-path: white
-    row_index: green_bold
-    record: white
-    list: white
-    block: white
-    hints: dark_gray
-    search_result: {bg: red fg: white}
-    shape_and: purple_bold
-    shape_binary: purple_bold
-    shape_block: blue_bold
-    shape_bool: light_cyan
-    shape_closure: green_bold
-    shape_custom: green
-    shape_datetime: cyan_bold
-    shape_directory: cyan
-    shape_external: cyan
-    shape_externalarg: green_bold
-    shape_filepath: cyan
-    shape_flag: blue_bold
-    shape_float: purple_bold
-    # shapes are used to change the cli syntax highlighting
-    shape_garbage: { fg: white bg: red attr: b}
-    shape_globpattern: cyan_bold
-    shape_int: purple_bold
-    shape_internalcall: cyan_bold
-    shape_keyword: cyan_bold
-    shape_list: cyan_bold
-    shape_literal: blue
-    shape_match_pattern: green
-    shape_matching_brackets: { attr: u }
-    shape_nothing: light_cyan
-    shape_operator: yellow
-    shape_or: purple_bold
-    shape_pipe: purple_bold
-    shape_range: yellow_bold
-    shape_record: cyan_bold
-    shape_redirection: purple_bold
-    shape_signature: green_bold
-    shape_string: green
-    shape_string_interpolation: cyan_bold
-    shape_table: blue_bold
-    shape_variable: purple
-    shape_vardecl: purple
+    let dark_theme = {
+    binary: '#e17599'
+    block: '#44aae6'
+    cell-path: '#c3dde1'
+    closure: '#3dd5e7'
+    custom: '#d9fbff'
+    duration: '#e5b684'
+    float: '#e65029'
+    glob: '#d9fbff'
+    int: '#e17599'
+    list: '#3dd5e7'
+    nothing: '#e9653b'
+    range: '#e5b684'
+    record: '#3dd5e7'
+    string: '#39e9a8'
+
+    bool: {|| if $in { '#5fffff' } else { '#e5b684' } }
+
+    datetime: {|| (date now) - $in |
+    if $in < 1hr {
+        { fg: '#e9653b' attr: 'b' }
+    } else if $in < 6hr {
+        '#e9653b'
+    } else if $in < 1day {
+        '#e5b684'
+    } else if $in < 3day {
+        '#39e9a8'
+    } else if $in < 1wk {
+        { fg: '#39e9a8' attr: 'b' }
+    } else if $in < 6wk {
+        '#3dd5e7'
+    } else if $in < 52wk {
+        '#44aae6'
+    } else { 'dark_gray' }
+    }
+
+    filesize: {|e|
+    if $e == 0b {
+        '#c3dde1'
+    } else if $e < 1mb {
+        '#3dd5e7'
+    } else {{ fg: '#44aae6' }}
+    }
+
+    shape_and: { fg: '#e17599' attr: 'b' }
+    shape_binary: { fg: '#e17599' attr: 'b' }
+    shape_block: { fg: '#44aae6' attr: 'b' }
+    shape_bool: '#5fffff'
+    shape_closure: { fg: '#3dd5e7' attr: 'b' }
+    shape_custom: '#39e9a8'
+    shape_datetime: { fg: '#3dd5e7' attr: 'b' }
+    shape_directory: '#3dd5e7'
+    shape_external: '#3dd5e7'
+    shape_external_resolved: '#5fffff'
+    shape_externalarg: { fg: '#39e9a8' attr: 'b' }
+    shape_filepath: '#3dd5e7'
+    shape_flag: { fg: '#44aae6' attr: 'b' }
+    shape_float: { fg: '#e65029' attr: 'b' }
+    shape_garbage: { fg: '#FFFFFF' bg: '#FF0000' attr: 'b' }
+    shape_glob_interpolation: { fg: '#3dd5e7' attr: 'b' }
+    shape_globpattern: { fg: '#3dd5e7' attr: 'b' }
+    shape_int: { fg: '#e17599' attr: 'b' }
+    shape_internalcall: { fg: '#3dd5e7' attr: 'b' }
+    shape_keyword: { fg: '#e17599' attr: 'b' }
+    shape_list: { fg: '#3dd5e7' attr: 'b' }
+    shape_literal: '#44aae6'
+    shape_match_pattern: '#39e9a8'
+    shape_matching_brackets: { attr: 'u' }
+    shape_nothing: '#e9653b'
+    shape_operator: '#e5b684'
+    shape_or: { fg: '#e17599' attr: 'b' }
+    shape_pipe: { fg: '#e17599' attr: 'b' }
+    shape_range: { fg: '#e5b684' attr: 'b' }
+    shape_raw_string: { fg: '#d9fbff' attr: 'b' }
+    shape_record: { fg: '#3dd5e7' attr: 'b' }
+    shape_redirection: { fg: '#e17599' attr: 'b' }
+    shape_signature: { fg: '#39e9a8' attr: 'b' }
+    shape_string: '#39e9a8'
+    shape_string_interpolation: { fg: '#3dd5e7' attr: 'b' }
+    shape_table: { fg: '#44aae6' attr: 'b' }
+    shape_vardecl: { fg: '#44aae6' attr: 'u' }
+    shape_variable: '#e17599'
+
+    foreground: '#cccccc'
+    background: '#1e1e1e'
+    cursor: '#cccccc'
+
+    empty: '#44aae6'
+    header: { fg: '#39e9a8' attr: 'b' }
+    hints: '#598489'
+    leading_trailing_space_bg: { attr: 'n' }
+    row_index: { fg: '#39e9a8' attr: 'b' }
+    search_result: { fg: '#e9653b' bg: '#c3dde1' }
+    separator: '#c3dde1'
 }
 
 let light_theme = {
