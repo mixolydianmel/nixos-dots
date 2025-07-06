@@ -2,12 +2,12 @@
 {
   services.gammastep = {
     enable = true;
-    provider = "manual";
-    latitude = 42.36;
-    longitude = -71.05;
+    provider = "geoclue2";
+    dawnTime = "08:00-09:00";
+    duskTime = "21:00-23:00";
     temperature = {
       day = 6500;
-      night = 5000;
+      night = 1000;
     };
   };
 }

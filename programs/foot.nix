@@ -19,26 +19,26 @@
 
       colors = {
         alpha = 1.0;
-        background = "1e2127";
-        foreground = "abb2bf";
+        background = "1e1e1e";
+        foreground = "d4d4d4";
 
-        regular0 = "5c6370";
-        regular1 = "e06c75";
-        regular2 = "98c379";
-        regular3 = "e5c07b";
-        regular4 = "61afef";
-        regular5 = "c678dd";
-        regular6 = "56b6c2";
-        regular7 = "abb2bf";
+        regular0 = "1e1e1e";
+        regular1 = "f44747";
+        regular2 = "608b4e";
+        regular3 = "d6ba7d";
+        regular4 = "569cd6";
+        regular5 = "c586c0";
+        regular6 = "4ec9b0";
+        regular7 = "d4d4d4";
 
-        bright0 = "5c6370";
-        bright1 = "e06c75";
-        bright2 = "98c379";
-        bright3 = "e5c07b";
-        bright4 = "61afef";
-        bright5 = "c678dd";
-        bright6 = "56b6c2";
-        bright7 = "abb2bf";
+        bright0 = "808080";
+        bright1 = "d16969";
+        bright2 = "b5cea8";
+        bright3 = "dcdcaa";
+        bright4 = "9cdcfe";
+        bright5 = "c586c0";
+        bright6 = "4ec9b0";
+        bright7 = "d4d4d4";
       };
     };
   };
