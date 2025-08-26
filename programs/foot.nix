@@ -29,9 +29,9 @@
         regular4 = "569cd6";
         regular5 = "c586c0";
         regular6 = "4ec9b0";
-        regular7 = "d4d4d4";
+        regular7 = "808080";
 
-        bright0 = "808080";
+        bright0 = "3a3d41";
         bright1 = "d16969";
         bright2 = "b5cea8";
         bright3 = "dcdcaa";

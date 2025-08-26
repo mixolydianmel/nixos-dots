@@ -9,7 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Widgets galore
-    ags.url = "github:Aylur/ags";
+    ags.url = "github:aylur/ags";
+    astal.url = "github:aylur/astal";
     # A calmer web
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

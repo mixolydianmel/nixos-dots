@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     asciidoctor-with-extensions
     beeper
     bottles
-    (blender.override {
-      cudaSupport = true;
-    })
+    # (blender.override {
+    #   cudaSupport = true;
+    # })
     calcurse
     # discord
     fastfetch
@@ -19,6 +19,8 @@
     imagemagick
     imv
     inkscape
+    inputs.zen-browser.packages."${pkgs.system}".twilight
+    libreoffice
     libsForQt5.qt5.qtwayland
     # lutris
     mpv

@@ -11,6 +11,7 @@
         indent-guides.render = true;
         color-modes = true;
         bufferline = "multiple";
+        auto-format = true;
 
         end-of-line-diagnostics = "hint";
         inline-diagnostics = {
@@ -153,9 +154,21 @@
         {
           name = "css";
           language-servers = ["vscode-css-language-server" "emmet-ls"];
+          file-types = [ "css" ];
           formatter = {
             command = "prettier";
             args = ["--parser" "css"];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "scss";
+          language-servers = [ "vscode-css-language-server" "emmet-ls" ];
+          file-types = [ "scss" ];
+          formatter = {
+            command = "prettier";
+            args = [ "--parser" "scss" ];
           };
           auto-format = true;
         }

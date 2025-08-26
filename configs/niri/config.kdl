@@ -5,6 +5,7 @@
 
 // Spawn startup programs.
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "/home/melody/.config/ags/result/bin/melshell"
 
 // Set environment variables.
 // FIXME: This should be done through envvars.nix instead.
@@ -291,6 +292,14 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
+// Steam notifications don't run through the standard notification daemon and
+// show up as floating windows in the center of the screen.
+// This is a workaround.
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -318,6 +327,20 @@ window-rule {
 window-rule {
   geometry-corner-radius 15
   clip-to-geometry true
+}
+
+layer-rule {
+  match namespace="gtk4-layer-shell";
+  shadow {
+    on
+    // off
+    softness 10
+    spread 5
+    offset x=0 y=1
+    draw-behind-window true
+    color "#00000064"
+    // inactive-color "#00000064"
+  }
 }
 
 binds {

@@ -1,0 +1,82 @@
+$black: #1e1e1e;
+$red: #f44747;
+$green: #608b4e;
+$yellow: #d6ba7d;
+$blue: #569cd6;
+$magenta: #c586c0;
+$cyan: #4ec9b0;
+$light-gray: #808080;
+$dark-gray: #3a3d41;
+$light-red: #d16969;
+$light-green: #b5cea8;
+$light-yellow: #dcdcaa;
+$light-blue: #9cdcfe;
+$light-pink: #e5b6e0;
+$light-cyan: #6ee9d0;
+$white: #d4d4d4;
+
+window.Bar {
+  background: transparent;
+  color: $white;
+  font-weight: 500;
+  font-family: "Geist", "Nacelle", "Bespoke Sans", sans-serif;
+  font-size: 12pt;
+
+  > centerbox {
+    background: $black;
+    padding: 0rem 1.5rem;
+    border-bottom: 1px solid $dark-gray;
+
+    button.toggle {
+      background: $black;
+      margin: 0;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0;
+      font-weight: 500;
+    }
+
+    button.toggle:hover {
+      background: $dark-gray;
+    }
+
+    popover > arrow,
+    popover > contents {
+      background: $black;
+      color: $white;
+      border: 1px solid $light-gray;
+    }
+
+    box.battery {
+      label {
+        margin-right: 0.5rem;
+      }
+
+      box.batteryBody {
+        outline: 1px solid $light-gray;
+        border: 0.15rem solid $black;
+        border-radius: 0.33rem;
+
+        > box.full {
+          background: $green;
+        }
+
+        > box.low {
+          background: $red;
+        }
+      }
+
+      box.batteryEnd {
+        background: $light-gray;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+    }
+
+    box.playerControls button {
+      background: $black;
+    }
+
+    box.playerControls button:hover {
+      background: $dark-gray;
+    }
+  }
+}
