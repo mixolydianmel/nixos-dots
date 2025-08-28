@@ -25,15 +25,15 @@
         };
 
         statusline = {
-          left = [ 
-            "mode" 
-            "spinner" 
-            "file-name" 
+          left = [
+            "mode"
+            "spinner"
+            "file-name"
             "read-only-indicator"
-            "file-modification-indicator" 
+            "file-modification-indicator"
             "version-control"
           ];
-          center = [];
+          center = [ ];
           right = [
             "diagnostics"
             "selections"
@@ -54,7 +54,10 @@
           space."." = "file_picker_in_current_buffer_directory";
           space.q = ":q";
           space.l = ":reflow";
-          esc = [ "collapse_selection" "keep_primary_selection" ];
+          esc = [
+            "collapse_selection"
+            "keep_primary_selection"
+          ];
           "H" = ":buffer-previous";
           "L" = ":buffer-next";
         };
@@ -84,49 +87,79 @@
           language-id = "asciidoc";
           scope = "text.adoc";
           injection-regex = "adoc";
-          file-types = ["adoc"];
-          comment-tokens = ["//"];
-          block-comment-tokens = { start = "////"; end = "////"; };
+          file-types = [ "adoc" ];
+          comment-tokens = [ "//" ];
+          block-comment-tokens = {
+            start = "////";
+            end = "////";
+          };
           grammar = "asciidoc";
         }
 
         {
           name = "typescript";
-          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          language-servers = [
+            "typescript-language-server"
+            "eslint"
+            "emmet-ls"
+          ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "typescript"];
+            args = [
+              "--parser"
+              "typescript"
+            ];
           };
           auto-format = true;
         }
 
         {
           name = "tsx";
-          file-types = ["tsx"];
-          language-servers = ["typescript-language-server" "eslint"];
+          file-types = [ "tsx" ];
+          language-servers = [
+            "typescript-language-server"
+            "eslint"
+          ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "typescript"];
+            args = [
+              "--parser"
+              "typescript"
+            ];
           };
           auto-format = false;
         }
 
         {
           name = "javascript";
-          language-servers = ["typescript-language-server" "eslint" "emmet-ls"];
+          language-servers = [
+            "typescript-language-server"
+            "eslint"
+            "emmet-ls"
+          ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "typescript"];
+            args = [
+              "--parser"
+              "typescript"
+            ];
           };
           auto-format = true;
         }
 
         {
           name = "jsx";
-          language-servers = [ "typescript-language-server" "eslint" "emmet-ls"];
+          language-servers = [
+            "typescript-language-server"
+            "eslint"
+            "emmet-ls"
+          ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "typescript"];
+            args = [
+              "--parser"
+              "typescript"
+            ];
           };
           auto-format = true;
         }
@@ -134,41 +167,81 @@
         {
           name = "json";
           formatter = {
-            language-servers = ["vscode-json-language-server" "eslint"];
+            language-servers = [
+              "vscode-json-language-server"
+              "eslint"
+            ];
             command = "prettier";
-            args = ["--parser" "json"];
+            args = [
+              "--parser"
+              "json"
+            ];
           };
           auto-format = true;
         }
 
         {
           name = "html";
-          language-servers = ["vscode-html-language-server" "emmet-ls"];
+          language-servers = [
+            "vscode-html-language-server"
+            "emmet-ls"
+          ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "html"];
+            args = [
+              "--parser"
+              "html"
+            ];
           };
           auto-format = true;
         }
 
         {
           name = "css";
-          language-servers = ["vscode-css-language-server" "emmet-ls"];
+          language-servers = [
+            "vscode-css-language-server"
+            "emmet-ls"
+          ];
           file-types = [ "css" ];
           formatter = {
             command = "prettier";
-            args = ["--parser" "css"];
+            args = [
+              "--parser"
+              "css"
+            ];
           };
           auto-format = true;
         }
 
         {
           name = "scss";
-          language-servers = [ "vscode-css-language-server" "emmet-ls" ];
+          language-servers = [
+            "vscode-css-language-server"
+            "emmet-ls"
+          ];
           file-types = [ "scss" ];
           formatter = {
             command = "prettier";
-            args = [ "--parser" "scss" ];
+            args = [
+              "--parser"
+              "scss"
+            ];
+          };
+          auto-format = true;
+        }
+
+        {
+          name = "typst";
+          language-servers = [
+            {
+              name = "tinymist";
+              except-features = [ "format" ];
+            }
+          ];
+          file-types = [ "typ" ];
+          formatter = {
+            command = "typstyle";
+            args = [ "-i" ];
           };
           auto-format = true;
         }
@@ -177,43 +250,71 @@
       language-server = {
         emmet-ls = {
           command = "emmet-ls";
-          args = ["--stdio"];
+          args = [ "--stdio" ];
         };
 
         eslint = {
           command = "vscode-eslint-language-server";
-          args = ["--stdio"];
+          args = [ "--stdio" ];
           config = {
-            codeActionsOnSave = { mode = "all"; "source.fixAll.eslint" = true; };
-            format = { enable = true; };
+            codeActionsOnSave = {
+              mode = "all";
+              "source.fixAll.eslint" = true;
+            };
+            format = {
+              enable = true;
+            };
             nodePath = "";
             quiet = false;
-            rulesCustomizations = [];
+            rulesCustomizations = [ ];
             run = "onType";
             validate = "on";
-            experimental = {};
-            problems = { shortenToSingleLine = false; };
+            experimental = { };
+            problems = {
+              shortenToSingleLine = false;
+            };
 
             codeAction = {
-              disableRuleComment = { enable = true; location = "separateLine"; };
-              showDocumentation = { enable = false; };
+              disableRuleComment = {
+                enable = true;
+                location = "separateLine";
+              };
+              showDocumentation = {
+                enable = false;
+              };
             };
           };
         };
 
         vscode-json-language-server.config = {
           json = {
-            validate = { enable = true; };
-            format = { enable = true; };
+            validate = {
+              enable = true;
+            };
+            format = {
+              enable = true;
+            };
           };
 
           provideFormatter = true;
         };
 
         vscode-css-language-server.config = {
-          css = { validate = { enable = true; }; };
-          scss = { validate = { enable = true; }; };
-          less = { validate = { enable = true; }; };
+          css = {
+            validate = {
+              enable = true;
+            };
+          };
+          scss = {
+            validate = {
+              enable = true;
+            };
+          };
+          less = {
+            validate = {
+              enable = true;
+            };
+          };
 
           provideFormatter = true;
         };
@@ -270,6 +371,7 @@
 
       # typst
       tinymist
+      typstyle
     ];
   };
 }
