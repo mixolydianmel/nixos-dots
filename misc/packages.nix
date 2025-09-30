@@ -5,9 +5,9 @@
     asciidoctor-with-extensions
     beeper
     bottles
-    # (blender.override {
-    #   cudaSupport = true;
-    # })
+    (blender.override {
+      cudaSupport = true;
+    })
     calcurse
     # discord
     fastfetch

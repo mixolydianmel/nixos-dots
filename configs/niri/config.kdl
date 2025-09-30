@@ -25,8 +25,7 @@ input {
       // For example:
       // layout "us,ru"
       // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-      layout "us"
-      options "compose:ralt"
+      file "~/.config/xkb/shaw-jafl.xkb"
     }
   }
 

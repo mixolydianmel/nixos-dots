@@ -711,7 +711,7 @@ xkb_compatibility "complete" {
     interpret.locking= False;
     interpret ISO_Level2_Latch+Exactly(Shift) {
         useModMapMods=level1;
-        action= LatchMods(modifiers=Shift,clearLocks,latchToLock);
+        action= LatchMods(modifiers=Shift,latchToLock);
     };
     interpret Shift_Lock+AnyOf(Shift+Lock) {
         action= LockMods(modifiers=Shift);
@@ -753,11 +753,11 @@ xkb_compatibility "complete" {
     };
     interpret Super_L+AnyOf(all) {
         virtualModifier= Super;
-        action= SetMods(modifiers=modMapMods,clearLocks);
+        action= SetMods(modifiers=modMapMods);
     };
     interpret Super_R+AnyOf(all) {
         virtualModifier= Super;
-        action= SetMods(modifiers=modMapMods,clearLocks);
+        action= SetMods(modifiers=modMapMods);
     };
     interpret Hyper_L+AnyOf(all) {
         virtualModifier= Hyper;
@@ -1046,10 +1046,10 @@ xkb_compatibility "complete" {
         action= Terminate();
     };
     interpret Alt_L+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Alt,clearLocks);
+        action= SetMods(modifiers=Alt);
     };
     interpret Alt_R+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Alt,clearLocks);
+        action= SetMods(modifiers=Alt);
     };
     interpret Meta_L+AnyOfOrNone(all) {
         action= SetMods(modifiers=Meta,clearLocks);
@@ -1058,10 +1058,10 @@ xkb_compatibility "complete" {
         action= SetMods(modifiers=Meta,clearLocks);
     };
     interpret Super_L+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Super,clearLocks);
+        action= SetMods(modifiers=Super);
     };
     interpret Super_R+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Super,clearLocks);
+        action= SetMods(modifiers=Super);
     };
     interpret Hyper_L+AnyOfOrNone(all) {
         action= SetMods(modifiers=Hyper,clearLocks);
@@ -1070,10 +1070,10 @@ xkb_compatibility "complete" {
         action= SetMods(modifiers=Hyper,clearLocks);
     };
     interpret Shift_L+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Shift,clearLocks);
+        action= SetMods(modifiers=Shift);
     };
     interpret Shift_R+AnyOfOrNone(all) {
-        action= SetMods(modifiers=Shift,clearLocks);
+        action= SetMods(modifiers=Shift);
     };
     interpret XF86Switch_VT_1+AnyOfOrNone(all) {
         repeat= True;
@@ -1155,7 +1155,7 @@ xkb_compatibility "complete" {
         action= LockMods(modifiers=Lock);
     };
     interpret Any+AnyOf(all) {
-        action= SetMods(modifiers=modMapMods,clearLocks);
+        action= SetMods(modifiers=modMapMods);
     };
     indicator "Caps Lock" {
         whichModState= locked;
@@ -1348,7 +1348,10 @@ xkb_symbols "pc_us_inet(evdev)" {
         symbols[Group1]= [           grave,      asciitilde ],
         symbols[Group2]= [  periodcentered,           U26AC ]
     };
-    key <LFSH> {         [         Shift_L ] };
+    key <LFSH> {
+        symbols[Group1]= [         Shift_L ],
+        symbols[Group2]= [       Caps_Lock ]
+    };
     key <BKSL> {
         symbols[Group1]= [       backslash,             bar ],
         symbols[Group2]= [          U10460,           slash ]
