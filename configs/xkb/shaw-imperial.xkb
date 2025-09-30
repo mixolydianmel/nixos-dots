@@ -1184,16 +1184,16 @@ xkb_compatibility "complete" {
 xkb_symbols "pc_us_inet(evdev)" {
 
     name[group1]="English (US)";
-    name[group2]="Shaw JAFL";
+    name[group2]="Shaw Imperial";
 
     key  <ESC> {         [          Escape ] };
     key <AE01> {
         symbols[Group1]= [               1,          exclam ],
-        symbols[Group2]= [          U10475,               1 ]
+        symbols[Group2]= [          U1046C,               1 ]
     };
     key <AE02> {
         symbols[Group1]= [               2,              at ],
-        symbols[Group2]= [          U1046C,               2 ]
+        symbols[Group2]= [          U10476,               2 ]
     };
     key <AE03> {
         symbols[Group1]= [               3,      numbersign ],
