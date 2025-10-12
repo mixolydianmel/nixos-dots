@@ -2,13 +2,8 @@
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    asciidoctor-with-extensions
     beeper
     bottles
-    (blender.override {
-      cudaSupport = true;
-    })
-    calcurse
     # discord
     fastfetch
     fd
@@ -19,9 +14,10 @@
     imagemagick
     imv
     inkscape
-    inputs.zen-browser.packages."${pkgs.system}".twilight
+    inputs.nix-citizen.packages."${pkgs.system}".star-citizen
+    # inputs.zen-browser.packages."${pkgs.system}".twilight
     libreoffice
-    libsForQt5.qt5.qtwayland
+    # libsForQt5.qt5.qtwayland
     # lutris
     mpv
     musescore
@@ -46,7 +42,7 @@
     # w3m
     # webcord
     # webcord-vencord
-    winePackages.wayland
+    # winePackages.wayland
     wl-clipboard
     xdg-desktop-portal
     xdg-desktop-portal-wlr

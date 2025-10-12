@@ -326,19 +326,8 @@
       clang-tools
       # lldb
 
-      # c-sharp
-      omnisharp-roslyn
-      netcoredbg
-
       # cmake
       cmake-language-server
-
-      # docker-compose
-      docker-compose-language-service
-      yaml-language-server
-
-      # dockerfile
-      dockerfile-language-server-nodejs
 
       # glsl
       glsl_analyzer
@@ -362,12 +351,12 @@
       nil
       nixd
 
+      # python
+      ty
+
       # rust
       rust-analyzer
       rustfmt
-
-      # typescript
-      typescript-language-server
 
       # typst
       tinymist
