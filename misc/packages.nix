@@ -19,7 +19,7 @@ in
     imagemagick
     imv
     inkscape
-    star-citizen
+    # star-citizen
     # inputs.zen-browser.packages."${pkgs.system}".twilight
     libreoffice
     # libsForQt5.qt5.qtwayland

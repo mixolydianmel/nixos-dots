@@ -2,7 +2,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "Melody Henrich";
-    userEmail = "mixolydianmel@proton.me";
+    settings = {
+      user = {
+        name = "Melody Henrich";
+        email = "mixolydianmel@proton.me";
+      };
+    };
   };
 }
