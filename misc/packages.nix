@@ -1,4 +1,9 @@
 { inputs, config, pkgs, ... }:
+let
+  star-citizen = inputs.nix-citizen.packages."${pkgs.system}".star-citizen-git.override (prev: {
+    enforceWaylandDrv = true;
+  });
+in
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -14,14 +19,14 @@
     imagemagick
     imv
     inkscape
-    inputs.nix-citizen.packages."${pkgs.system}".star-citizen
+    star-citizen
     # inputs.zen-browser.packages."${pkgs.system}".twilight
     libreoffice
     # libsForQt5.qt5.qtwayland
     # lutris
     mpv
     musescore
-    nb
+    # nb
     niri
     nvtopPackages.full
     p7zip

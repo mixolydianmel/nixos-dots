@@ -101,8 +101,8 @@
               name = "daily-notes";
               settings = {
                 autorun = true;
-                folder = "𐑛𐑱𐑤𐑦𐑟";
-                template = "𐑛𐑱𐑤𐑦𐑟/𐑑𐑧𐑥𐑐𐑤𐑩𐑑";
+                folder = "Dailies";
+                template = "Dailies/Template";
               };
             }
             "templates"
