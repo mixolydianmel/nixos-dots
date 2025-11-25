@@ -339,9 +339,12 @@
 
       # html
       superhtml
-      vscode-langservers-extracted # Also does CSS, JSON, and ESLint
+      vscode-langservers-extracted # HTML, CSS, JSON, and ESLint
       emmet-ls
       nodePackages.prettier
+
+      # java
+      jdt-language-server
 
       # markdown
       marksman

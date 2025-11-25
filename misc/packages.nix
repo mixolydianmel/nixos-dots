@@ -1,29 +1,24 @@
-{ inputs, config, pkgs, ... }:
-let
-  star-citizen = inputs.nix-citizen.packages."${pkgs.system}".star-citizen-git.override (prev: {
-    enforceWaylandDrv = true;
-  });
-in
+{ pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     beeper
+    (blender.override {
+      cudaSupport = true;
+    })
     bottles
+    davinci-resolve
     # discord
     fastfetch
     fd
     ffmpeg-full
     gamemode
     # gimp
-    # grim
     imagemagick
     imv
     inkscape
-    # star-citizen
-    # inputs.zen-browser.packages."${pkgs.system}".twilight
     libreoffice
     # libsForQt5.qt5.qtwayland
-    # lutris
     mpv
     musescore
     # nb
@@ -39,10 +34,15 @@ in
     ripdrag
     sc-im
     slack
-    # slurp
     spotify
     # typst
     # ueberzugpp
+    (unityhub.override {
+      extraPkgs = upkgs: [
+        upkgs.harfbuzz
+        upkgs.libogg
+      ];
+    })
     vesktop
     # w3m
     # webcord
@@ -51,6 +51,7 @@ in
     wl-clipboard
     xdg-desktop-portal
     xdg-desktop-portal-wlr
+    xorg.libXtst
     xwayland-satellite
   ];
 }
