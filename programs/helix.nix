@@ -66,7 +66,7 @@
     themes = {
       dark_plus-nobg = {
         "inherits" = "dark_plus";
-        "ui.background" = "none";
+        "ui.background" = {};
       };
     };
     languages = {
@@ -324,7 +324,7 @@
       # --- Language Servers ---
       # c / c++
       clang-tools
-      # lldb
+      lldb
 
       # cmake
       cmake-language-server
@@ -346,6 +346,10 @@
       # java
       jdt-language-server
 
+      # just
+      just-formatter
+      just-lsp
+
       # markdown
       marksman
       markdown-oxide
@@ -360,6 +364,7 @@
       # rust
       rust-analyzer
       rustfmt
+      # lldb already included from cpp
 
       # typst
       tinymist

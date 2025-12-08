@@ -15,6 +15,7 @@
     # ../programs/cava.nix
     # ../programs/eww.nix
     ../programs/firefox.nix
+    # ../programs/floorp.nix
     ../programs/foot.nix
     ../programs/fuzzel.nix
     # ../programs/fzf.nix
@@ -33,11 +34,11 @@
     # ../programs/obs-studio.nix
     ../programs/ripgrep.nix
     ../programs/starship.nix
+    # ../programs/tmux.nix
     ../programs/zathura.nix
     # ../programs/zed.nix
     # ../programs/zen-browser.nix
     # inputs.zen-browser.homeModules.beta
-    # ../programs/floorp.nix
 
     # --- User Services ---
     ../services/gammastep.nix

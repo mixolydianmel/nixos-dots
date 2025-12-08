@@ -2,25 +2,95 @@
 {
   programs.zed-editor = {
     enable = true;
+
+    # Links to repo names
+    # https://github.com/zed-industries/extensions/tree/main/extensions
     extensions = [
+      "emmet"
+      "superhtml"
+      "java"
+      "log"
+      "make"
       "nix"
-      "TOML"
+      "nu"
+      "scss"
+      "shader-ls"
+      "toml"
+      "typst"
+      "vscode-dark-plus"
+      "vscode-icons"
     ];
+
     userSettings = {
-      telemetry = {
-        metrics = false;
-      };
-      vim_mode = false;
-      ui_font_size = 24;
-      buffer_font_size = 32;
       theme = {
-        mode = "dark";
-        dark = "One Dark";
-        light = "One Light";
+        mode = "system";
+        light = "One Dark";
+        dark = "";
       };
-      lsp = {
-        rust-analyzer.binary.path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+      icon_theme = "Zed (Default)";
+      buffer_font_family = "JetBrainsMono Nerd Font";
+      buffer_font_size = 18;
+      ui_font_family = "Geist";
+      ui_font_features = {
+        # Disable ligatures:
+        calt = false;
       };
+      ui_font_size = 18;
+      disable_ai = true;
+      auto_update = false;
+      helix_mode = true;
     };
+
+    # Why would you not do this
+    mutableUserKeymaps = false;
+    mutableUserSettings = false;
+    mutableUserTasks = false;
+
+    extraPackages = with pkgs; [
+      # --- Language Servers ---
+      # c / c++
+      clang-tools
+      lldb
+
+      # cmake
+      cmake-language-server
+
+      # glsl
+      glsl_analyzer
+
+      # go
+      gopls
+      golangci-lint
+      golangci-lint-langserver
+
+      # html
+      superhtml
+      vscode-langservers-extracted # HTML, CSS, JSON, and ESLint
+      emmet-ls
+      nodePackages.prettier
+
+      # java
+      jdt-language-server
+
+      # markdown
+      marksman
+      markdown-oxide
+
+      # nix
+      nil
+      nixd
+
+      # python
+      ty
+
+      # rust
+      rust-analyzer
+      rustfmt
+      # lldb already included from cpp
+
+      # typst
+      tinymist
+      typstyle
+    ];
   };
 }
