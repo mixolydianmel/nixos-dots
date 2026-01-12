@@ -245,6 +245,21 @@
           };
           auto-format = true;
         }
+
+        {
+          name = "just";
+          auto-format = true;
+          formatter = { command = "just-formatter"; };
+        }
+
+        {
+          name = "cpp";
+          auto-format = true;
+          formatter = {
+            command = "clang-format";
+            args = [ "--style=Google" ];
+          };
+        }
       ];
 
       language-server = {

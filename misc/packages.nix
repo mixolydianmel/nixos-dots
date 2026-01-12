@@ -18,6 +18,7 @@
     imv
     inkscape
     libreoffice
+    librewolf
     # libsForQt5.qt5.qtwayland
     mpv
     musescore

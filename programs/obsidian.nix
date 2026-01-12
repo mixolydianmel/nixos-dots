@@ -38,9 +38,9 @@
       appearance = {
         theme = "system";
         accentColor = "#569cd6";
-        interfaceFontFamily = "Geist;Inter Alia";
-        textFontFamily = "Geist;Inter Alia";
-        monospaceFontFamily = "JetBrainsMono Nerd Font;Fairfax HD";
+        interfaceFontFamily = "JetBrainsMono Nerd Font";
+        textFontFamily = "JetBrainsMono Nerd Font";
+        monospaceFontFamily = "JetBrainsMono Nerd Font";
         baseFontSize = 24;
         baseFontSizeAction = true;
         showViewHeader = true;
@@ -101,8 +101,8 @@
               name = "daily-notes";
               settings = {
                 autorun = true;
-                folder = "Dailies";
-                template = "Dailies/Template";
+                folder = "06 - Dailies";
+                template = "06 - Dailies/Template";
               };
             }
             "templates"

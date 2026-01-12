@@ -14,7 +14,7 @@
     ../programs/bottom.nix
     # ../programs/cava.nix
     # ../programs/eww.nix
-    ../programs/firefox.nix
+    # ../programs/firefox.nix
     # ../programs/floorp.nix
     ../programs/foot.nix
     ../programs/fuzzel.nix
