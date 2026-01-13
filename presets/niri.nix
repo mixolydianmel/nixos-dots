@@ -37,8 +37,6 @@
     # ../programs/tmux.nix
     ../programs/zathura.nix
     # ../programs/zed.nix
-    # ../programs/zen-browser.nix
-    # inputs.zen-browser.homeModules.beta
 
     # --- User Services ---
     ../services/gammastep.nix

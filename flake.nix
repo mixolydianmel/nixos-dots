@@ -11,15 +11,6 @@
     # Widgets galore
     ags.url = "github:aylur/ags";
     astal.url = "github:aylur/astal";
-    # A calmer web
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # Gaminggg!
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    nix-citizen.url = "github:LovingMelody/nix-citizen";
-    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
   };
 
   outputs =

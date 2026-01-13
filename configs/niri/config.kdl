@@ -124,7 +124,9 @@ output "eDP-1" {
   position x=0 y=0
 
   // Set a custom background color for a monitor's workspaces.
-  background-color "transparent"
+  layout {
+    background-color "transparent"
+  }
 }
 
 output "HDMI-A-3" {
@@ -132,7 +134,9 @@ output "HDMI-A-3" {
   scale 1
   transform "normal"
   position x=0 y=0
-  background-color "transparent"
+  layout {
+    background-color "transparent"
+  }
 }
 
 // Settings that influence how windows are positioned and sized.

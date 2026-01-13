@@ -3,18 +3,18 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     beeper
-    (blender.override {
-      cudaSupport = true;
-    })
-    bottles
-    davinci-resolve
+    # (blender.override {
+    #   cudaSupport = true;
+    # })
+    # bottles
+    # davinci-resolve
     # discord
     fastfetch
     fd
     ffmpeg-full
     gamemode
     # gimp
-    imagemagick
+    # imagemagick
     imv
     inkscape
     libreoffice
@@ -38,12 +38,12 @@
     spotify
     # typst
     # ueberzugpp
-    (unityhub.override {
-      extraPkgs = upkgs: [
-        upkgs.harfbuzz
-        upkgs.libogg
-      ];
-    })
+    # (unityhub.override {
+    #   extraPkgs = upkgs: [
+    #     upkgs.harfbuzz
+    #     upkgs.libogg
+    #   ];
+    # })
     vesktop
     # w3m
     # webcord
