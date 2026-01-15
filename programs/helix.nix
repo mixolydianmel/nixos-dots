@@ -376,6 +376,9 @@
       # python
       ty
 
+      # QML
+      kdePackages.qtdeclarative
+
       # rust
       rust-analyzer
       rustfmt
