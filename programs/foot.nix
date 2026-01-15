@@ -12,7 +12,7 @@
         font = "JetBrainsMono Nerd Font Mono:size=11";
         dpi-aware = "yes";
 
-        pad = "16x8 center";
+        pad = "16x16 center";
       };
 
       mouse = {
