@@ -42,8 +42,6 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
           <label label={focusedWindow} />
         </box>
         <box $type="end" spacing={8}>
-          <Mpris />
-          <Audio />
           <Battery />
           <Date />
           <Clock />
