@@ -25,6 +25,7 @@
     # ../programs/hyprland.nix
     # ../programs/jq.nix
     # ../programs/jujutsu.nix
+    # ../programs/kitty.nix
     # ../programs/lf.nix
     # ../programs/librewolf.nix
     # ../programs/neovim.nix
