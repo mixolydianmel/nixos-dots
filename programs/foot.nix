@@ -11,6 +11,8 @@
 
         font = "JetBrainsMono Nerd Font Mono:size=11";
         dpi-aware = "yes";
+
+        pad = "10x10 center";
       };
 
       mouse = {
