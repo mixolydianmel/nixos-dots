@@ -44,6 +44,7 @@
     ../services/mako.nix
     ../services/poweralertd.nix
     # ../services/pueue.nix
+    ../services/safeeyes.nix
     # ../services/wluma.nix
     ../services/xdg-portal.nix
   ];
