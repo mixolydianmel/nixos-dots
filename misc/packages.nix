@@ -6,6 +6,7 @@
     # (blender.override {
     #   cudaSupport = true;
     # })
+    bluetui
     # bottles
     # davinci-resolve
     # discord
@@ -17,6 +18,7 @@
     gamemode
     # gimp
     # imagemagick
+    impala
     imv
     inkscape
     libreoffice

@@ -377,7 +377,7 @@ binds {
   Mod+Ctrl+D { spawn "vesktop"; }
 
   Mod+Shift+P { spawn "foot" "pulsemixer"; }
-  Mod+Shift+B { spawn "foot" "bluetoothctl"; }
+  Mod+Shift+B { spawn "foot" "bluetui"; }
   mod+Shift+S { spawn "foot" "btm"; }
 
   mod+Shift+A { spawn "bash" "-c" "~/.scripts/passmenu.bash"; }
