@@ -9,6 +9,8 @@
     # bottles
     # davinci-resolve
     # discord
+    duf
+    dust
     fastfetch
     fd
     ffmpeg-full

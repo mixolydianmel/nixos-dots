@@ -9,7 +9,7 @@
 
         term = "xterm-256color";
 
-        font = "JetBrainsMono Nerd Font:size=11";
+        font = "JetBrainsMono Nerd Font Mono:size=11";
         dpi-aware = "yes";
       };
 
