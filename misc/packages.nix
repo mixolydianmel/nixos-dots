@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -28,10 +28,11 @@
     musescore
     # nb
     niri
+    nitch
     nvtopPackages.full
     p7zip
     pass-wayland
-    pfetch
+    # pfetch
     prismlauncher
     pulsemixer
     qpwgraph
@@ -58,5 +59,6 @@
     xdg-desktop-portal-wlr
     xorg.libXtst
     xwayland-satellite
+    inputs.yt-x.packages."x86_64-linux".default
   ];
 }

@@ -16,7 +16,7 @@
     # ../programs/eww.nix
     # ../programs/firefox.nix
     # ../programs/floorp.nix
-    ../programs/foot.nix
+    # ../programs/foot.nix
     ../programs/fuzzel.nix
     # ../programs/fzf.nix
     # ../programs/gh.nix
@@ -25,7 +25,7 @@
     # ../programs/hyprland.nix
     # ../programs/jq.nix
     # ../programs/jujutsu.nix
-    # ../programs/kitty.nix
+    ../programs/kitty.nix
     # ../programs/lf.nix
     # ../programs/librewolf.nix
     # ../programs/neovim.nix

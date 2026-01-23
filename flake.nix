@@ -11,6 +11,11 @@
     # Widgets galore
     ags.url = "github:aylur/ags";
     astal.url = "github:aylur/astal";
+    # Youtube in the Terminal
+    yt-x = {
+      url = "github:Benexl/yt-x";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

@@ -9,7 +9,7 @@
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     ENABLE_VKBASALT = "1";
-    QT_QPA_PLATFORMTHEME = "wayland;xcb";
+    QT_QPA_PLATFORMTHEME = "gtk3";
     DISPLAY = ":0";
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
   };

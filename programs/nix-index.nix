@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
 {
-  programs.nix-index.enable = true;
+  programs.nix-index = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
 }

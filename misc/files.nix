@@ -7,5 +7,6 @@
   xdg.configFile = {
     "niri/config.kdl".source = ../configs/niri/config.kdl;
     "xkb/shaw-imperial.xkb".source = ../configs/xkb/shaw-imperial.xkb;
+    "fastfetch/config.jsonc".source = ../configs/fastfetch/config.jsonc;
   };
 }

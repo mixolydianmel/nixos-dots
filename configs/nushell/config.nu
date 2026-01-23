@@ -814,4 +814,10 @@ $env.config = {
 alias q  = exit
 alias ll = ls -l
 
-pfetch
+alias he = home-manager edit
+alias hs = home-manager switch --cores 16
+
+alias nc = sudo hx /etc/nixos
+alias nrs = sudo nixos-rebuild switch --flake '/etc/nixos'
+
+nitch
