@@ -2,83 +2,96 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "small",
-    "padding": {
-      "top": 1
-    }
+    "type": "none"
   },
   "display": {
-    "separator": " "
+    "separator": " ",
+    "color": {
+      "keys": "default"
+    }
   },
   "modules": [
     {
-      "key": "╭───────────╮",
+      "key": "{#}   _  ___      ____  ____",
       "type": "custom"
     },
     {
-      "key": "│ {#31} user    {#keys}│",
+      "key": "{#}  / |/ (_)_ __/ __ \\/ __/",
+      "type": "custom"
+    },
+    {
+      "key": "{#magenta} /    / /\\ \\ / /_/ /\\ \\  ",
+      "type": "custom"
+    },
+    {
+      "key": "{#blue}/_/|_/_//_\\_\\\\____/___/  ",
+      "type": "custom"
+    },
+    {
+      "key": "{#} ",
+      "type": "custom"
+    },
+    {
+      "key": "  ╭───────────╮",
+      "type": "custom"
+    },
+    {
+      "key": "  │ {#red}{#} user    {#keys}│",
       "type": "title",
-      "format": "{user-name}"
+      "format": "{#red}{user-name}{#}"
     },
     {
-      "key": "│ {#32}󰇅 hname   {#keys}│",
+      "key": "  │ {#yellow}󰇅{#} hname   {#keys}│",
       "type": "title",
-      "format": "{host-name}"
+      "format": "{#yellow}{host-name}{#}"
     },
     {
-      "key": "│ {#33}󰅐 uptime  {#keys}│",
-      "type": "uptime"
+      "key": "  │ {#green}{icon}{#} distro  {#keys}│",
+      "type": "os",
+      "format": "{#green}{pretty-name}{#}"
     },
     {
-      "key": "│ {#34}{icon} distro  {#keys}│",
-      "type": "os"
+      "key": "  │ {#cyan}{#} kernel {#keys} │",
+      "type": "kernel",
+      "format": "{#cyan}{release}{#}"
     },
     {
-      "key": "│ {#35} kernel  {#keys}│",
-      "type": "kernel"
+      "key": "  │ {#blue}{#} uptime  {#keys}│",
+      "type": "uptime",
+      "format": "{#blue}{formatted}{#}"
     },
     {
-      "key": "│ {#36}󰇄 desktop {#keys}│",
-      "type": "de"
+      "key": "  │ {#magenta}{#} shell   {#keys}│",
+      "type": "shell",
+      "format": "{#magenta}{pretty-name}{#}"
     },
     {
-      "key": "│ {#31} term    {#keys}│",
-      "type": "terminal"
+      "key": "  │ {#red}󰏖{#} pkgs    {#keys}│",
+      "type": "packages",
+      "format": "{#red}{all}{#}"
     },
     {
-      "key": "│ {#32} shell   {#keys}│",
-      "type": "shell"
-    },
-    {
-      "key": "│ {#33}󰍛 cpu     {#keys}│",
-      "type": "cpu",
-      "showPeCoreCount": true
-    },
-    {
-      "key": "│ {#34}󰉉 disk    {#keys}│",
+      "key": "  │ {#yellow}󰉉{#} disk    {#keys}│",
       "type": "disk",
-      "folders": "/"
+      "folders": "/",
+      "format": "{#yellow}{size-used} | {size-total}"
     },
     {
-      "key": "│ {#35} memory  {#keys}│",
-      "type": "memory"
-    },
-    {
-      "key": "│ {#36}󰩟 network {#keys}│",
+      "key": "  │ {#green}󰩟{#} network {#keys}│",
       "type": "localip",
-      "format": "{ipv4} ({ifname})"
+      "format": "{#green}{ipv4} ({ifname}){#}"
     },
     {
-      "key": "├───────────┤",
+      "key": "  ├───────────┤",
       "type": "custom"
     },
     {
-      "key": "│ {#39} colors  {#keys}│",
+      "key": "  │ {#white}{#} colors  {#keys}│",
       "type": "colors",
       "symbol": "circle"
     },
     {
-      "key": "╰───────────╯",
+      "key": "  ╰───────────╯",
       "type": "custom"
     }
   ]

@@ -8,6 +8,7 @@
     # })
     bluetui
     # bottles
+    brightnessctl
     # davinci-resolve
     # discord
     duf
@@ -28,7 +29,7 @@
     musescore
     # nb
     niri
-    nitch
+    # nitch
     nvtopPackages.full
     p7zip
     pass-wayland

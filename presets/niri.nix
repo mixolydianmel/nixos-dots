@@ -34,6 +34,7 @@
     ../programs/obsidian.nix
     # ../programs/obs-studio.nix
     ../programs/ripgrep.nix
+    ../programs/rofi.nix
     ../programs/starship.nix
     # ../programs/tmux.nix
     ../programs/zathura.nix
