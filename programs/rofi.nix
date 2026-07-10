@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   programs.rofi = {
-    enable = false; # true;
+    enable = true;
 
     pass = {
       enable = true;
